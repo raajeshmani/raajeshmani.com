@@ -1,0 +1,212 @@
+
+:root {
+    /* Colours */
+    --primary: white;
+    --secondary: #E42360;
+    --background-color: #19101F;
+    --font-color: white;
+    --navbar-color: violet;
+    --link-color: white;
+
+    /* Font */
+    --font-family: 'traffolight', 'Source Serif Pro', -apple-system, BlinkMacSystemFont, 'Inter',
+    'Helvetica Neue', 'Roboto', Roboto, Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+
+    /* Font Sizes */
+    --space-56: 56px;
+    --space-52: 52px;
+    --space-48: 48px;
+    --space-42: 42px;
+    --space-32: 32px;
+    --space-26: 26px;
+    --screen-width-1280: 1280px;
+    --screen-width-1024: 1024px;
+    --screen-width-922: 922px;
+    --screen-width-600: 600px;
+
+    --font-sizes-10: 10px;
+    --font-sizes-12: 12px;
+    --font-sizes-14: 14px;
+    --font-sizes-16: 16px;
+    --font-sizes-18: 18px;
+    --font-sizes-20: 20px;
+    --font-sizes-22: 22px;
+    --font-sizes-24: 24px;
+    --font-sizes-26: 26px;
+    --font-sizes-28: 28px;
+    --font-sizes-32: 32px;
+    --font-sizes-34: 34px;
+    --font-sizes-36: 36px;
+    --font-sizes-38: 38px;
+
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0px;
+}
+
+body {
+    /* -webkit-font-smoothing: antialiased; */
+    padding: 0 2%;
+    margin: 0 auto;
+    position: relative;
+    font-family: var(--font-family);
+    font-size: var(--font-size-16);
+    line-height: 1.6;
+    color: var(--font-color);
+    background: var(--background-color);
+    max-width: var(--screen-width-1280);
+  }
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.red {
+    color: var(--secondary);
+    font-size: 1.25rem;
+}
+
+
+/* Navigation Header */
+.navigation {
+    font-size: var(--font-sizes-30);
+    display: flex;
+    position: relative;
+    height: 80px;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    z-index: 10;
+    max-width: var(--screen-width-1280);
+}
+
+.navigation .initials {
+    font-size: var(--font-sizes-34);
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+
+/* Intro about myself */
+.intro {
+    font-size: var(--font-sizes-18);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    max-width: var(--screen-width-1280);
+    padding-top: var(--space-56);
+    padding-bottom: var(--space-56);
+}
+
+.intro .intro-name {
+    font-size: var(--font-sizes-28);
+}
+
+.intro .intro-description {
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .intro {
+        padding: var(--space-48) 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .intro {
+        padding: var(--space-42) 0;
+    }
+}
+
+
+@media screen and (max-width: 922px) {
+    .initials {
+        font-size: var(--font-sizes-20);
+    }
+    .intro {
+        padding: var(--space-32) 0;
+        font-size: var(--font-sizes-14);
+
+    }
+    .intro .intro-name {
+        font-size: var(--font-sizes-24);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .initials {
+        font-size: var(--font-sizes-16);
+    }
+    .intro {
+        padding: var(--space-26) 0;
+        font-size: var(--font-sizes-14);
+    }
+    .intro .intro-name {
+        font-size: var(--font-sizes-20);
+    }
+}
+
+
+/* Footer */
+.footer {
+    font-size: var(--font-sizes-30);
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    max-width: var(--screen-width-1280);
+}
+
+.footer .intro-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.footer .intro-social a {
+    color: #fff;
+    font-size: 24px;
+    padding: 4%;
+    transition: all .4s
+}
+
+.footer .intro-social a img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    bottom: -4px;
+    transition: transform .25s ease-in;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'traffolight';
+    src: url('assets/fonts/traffolight-webfont.woff2') format('woff2'), url('assets/fonts/traffolight-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
