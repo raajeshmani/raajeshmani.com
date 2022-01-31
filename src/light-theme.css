@@ -1,0 +1,9 @@
+.light {
+    --primary: #19101F;
+    --secondary: #E42360;
+    --background-color: white;
+    --font-color: #19101F;
+    --navbar-color: violet;
+    --link-color: purple;
+    --navbar-color-hover: #e4e4e4;
+}
