@@ -11,7 +11,7 @@ export default function IndexPage () {
         <>
         <Layout>
             <Helmet title={config.siteTitle} htmlAttributes={{"lang": "en"}}>
-                <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ' rel='preconnect stylesheet ' />
+                <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ' rel='preload stylesheet ' />
             </Helmet>
             <SearchEngineOptimization />
 

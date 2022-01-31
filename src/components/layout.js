@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import { Navigation } from './navigation'
 import { Footer } from './footer'
 
+import favicon from '../assets/favicon.webp'
 import '../styles.css'
 import '../light-theme.css'
 
@@ -49,10 +50,10 @@ export const Layout = ({ children }) => {
     return (
         <>
             <Helmet>
-                <link rel="shortcut icon " href="favicon.webp " type="image/x-icon " />
+                <link rel="shortcut icon " href={favicon} type="image/x-icon " />
             </Helmet>
             <div className={'layout ' + theme}>
-                <Navigation updateTheme={() => onUpdateTheme(theme)} theme={theme}/>
+                <Navigation updateTheme={() => onUpdateTheme(theme)} theme={theme} />
                 <main>{children}</main>
                 <Footer />
             </div>
