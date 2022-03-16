@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Navigation } from './navigation'
-import { Footer } from './footer'
+import { Navigation } from './navigation/navigation'
+import { Footer } from './footer/footer'
 
 import favicon from '../assets/favicon.webp'
 import '../styles.css'

@@ -1,0 +1,24 @@
+/* Intro about myself */
+.intro {
+    font-size: var(--font-sizes-18);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    max-width: var(--screen-width-1280);
+    padding-top: var(--space-56);
+    padding-bottom: var(--space-56);
+}
+
+.intro .intro-name {
+    font-size: var(--font-sizes-28);
+}
+
+.intro .intro-description {
+    letter-spacing: 3px;
+    text-align: center;
+}

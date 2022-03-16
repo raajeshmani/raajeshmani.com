@@ -1,6 +1,7 @@
 import React from 'react'
 
-import config from '../utils/config'
+import config from '../../utils/config'
+import './navigation.css'
 
 export const Navigation = ({ updateTheme, theme }) => {
     const heightAndWidth = "20px"

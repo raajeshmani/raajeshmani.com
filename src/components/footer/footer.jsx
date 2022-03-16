@@ -1,19 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+
+import './footer.css'
 
 const socialLinks = [
     { url: 'https://github.com/raajeshmani', icon: 'fa fa-github', label: 'GitHub' },
     { url: 'https://twitter.com/RaajeshMani ', icon: 'fa fa-twitter', label: 'Twitter' },
+    { url: 'mailto:raajeshmani19@gmail.com', icon: 'fa fa-envelope', label: 'Mail' },
     { url: 'https://www.linkedin.com/in/raajesh-m/', icon: 'fa fa-linkedin', label: 'Linkedin' },
 ]
+
+
 export const Footer = () => {
+
+    const onClickAction = (social) => {
+        console.log('On Click Action', social)
+        typeof window !== "undefined" && window.gtag("event", "click", { label: social.label, url: social.url, click: "Social Link" })
+    }
+
     return (
         <footer className='footer'>
             <div className="intro-social ">
                 {socialLinks.map((social) => (
-                    <a href={social.url} target="_blank " key={social.label}><i label={social.label} className={social.icon}></i></a>
+                    <a onClick={() => onClickAction(social)} href={social.url} target="_blank " key={social.label}><i label={social.label} className={social.icon}></i></a>
                 ))}
                 <a className="svg" href="https://drive.google.com/open?id=1vGyIp5HvJ_aHuJLlv2APdmWP5y1Fkkbv " key="Raajesh Résumé " target="_blank ">
-                    <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace='preserve' xlinkHref='http://www.w3.org/1999/xlink' width="35px" height="35px">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" xmlSpace='preserve' xlinkHref='http://www.w3.org/1999/xlink' width="35px" height="35px">
                         <path fill="var(--primary)" d="M441.835,316.549c4.142,0,7.5-3.358,7.5-7.5V66.187c0-9.903-8.057-17.959-17.959-17.959h-33.041V17.959   C398.335,8.057,390.279,0,380.376,0H80.722c-9.903,0-17.959,8.057-17.959,17.959v177.088c0,9.673,15,9.673,15,0v-59.761h34.185   c12.582,21.863,36.403,35.751,61.643,35.751c26.34,0,49.362-14.411,61.644-35.751h148.101v310.624c0,1.604-1.355,2.959-2.959,2.959   H80.722c-1.604,0-2.959-1.355-2.959-2.959V232.049c0-9.673-15-9.673-15,0v213.862c0,9.903,8.057,17.959,17.959,17.959h33.041   v30.268c0,9.903,8.057,17.959,17.959,17.959h299.654c9.903,0,17.959-8.057,17.959-17.959V347.049c0-9.673-15-9.673-15,0v147.089   c0,1.604-1.355,2.959-2.959,2.959H131.722c-1.604,0-2.959-1.355-2.959-2.959v-30.268h251.614c9.903,0,17.959-8.057,17.959-17.959   V63.227h33.041c1.604,0,2.959,1.355,2.959,2.959v242.862C434.335,313.191,437.693,316.549,441.835,316.549z M142.688,146.726   c2.526-14.276,11.83-29.184,31.207-29.299c0.045,0,0.089,0.003,0.134,0.003c0.077,0,0.153-0.005,0.23-0.006   c16.143,0.069,28.839,11.818,31.413,28.492c-9.098,6.369-20.157,10.122-32.082,10.122   C162.178,156.039,151.556,152.604,142.688,146.726z M160.685,89.089c0-7.356,5.986-13.341,13.345-13.341   c7.356,0,13.341,5.985,13.341,13.341c0,7.306-5.903,13.251-13.189,13.334c-0.021,0-0.042-0.002-0.063-0.002   c-0.063,0-0.124,0.004-0.187,0.004C166.619,102.372,160.685,96.413,160.685,89.089z M218.061,134.073   c-4.161-11.628-12.26-20.989-22.633-26.432c4.319-4.976,6.943-11.461,6.943-18.552c0-15.627-12.714-28.341-28.341-28.341   c-15.629,0-28.345,12.714-28.345,28.341c0,7.065,2.604,13.528,6.896,18.497c-10.459,5.513-18.383,15.18-22.5,27.708   c-7.856-9.653-12.577-21.955-12.577-35.343c0-30.927,25.161-56.088,56.087-56.088s56.088,25.161,56.088,56.088   C229.678,112.782,225.337,124.612,218.061,134.073z M241.699,120.287c1.929-6.447,2.979-13.27,2.979-20.336   c0-39.198-31.89-71.088-71.088-71.088s-71.087,31.89-71.087,71.088c0,7.066,1.051,13.889,2.979,20.336h-27.72V17.959   c0-1.604,1.355-2.959,2.959-2.959h299.654c1.604,0,2.959,1.355,2.959,2.959v102.328H241.699z" />
                         <path fill="var(--secondary)" d="M115.659,230.549h117.674c9.673,0,9.673-15,0-15H115.659C105.986,215.549,105.986,230.549,115.659,230.549z" />
                         <path fill="var(--secondary)" d="M115.659,276.94h227.202c9.673,0,9.673-15,0-15H115.659C105.986,261.94,105.986,276.94,115.659,276.94z" />

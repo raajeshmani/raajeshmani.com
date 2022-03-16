@@ -1,0 +1,43 @@
+
+/* Navigation Header */
+.navigation {
+    font-size: var(--font-sizes-30);
+    position: relative;
+    height: 80px;
+    width: 100%;
+    z-index: 10;
+}
+
+.navigation-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: var(--screen-width-1280);
+}
+
+.navigation .initials {
+    font-size: var(--font-sizes-34);
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+.navigation .theme-icon {
+    background-color: var(--font-color);
+    width: 35px;
+    height: 35px;
+}
+
+.navigation button:hover {
+    background: var(--navbar-color-hover);
+    color: var(--primary);
+}
+
+.navigation button:focus {
+    outline: none;
+}
+
+.navigation button:focus-visible {
+    outline: 3px solid var(--primary);
+}
