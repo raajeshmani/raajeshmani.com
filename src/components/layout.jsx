@@ -25,7 +25,10 @@ export const Layout = ({ children }) => {
 
     // Rotates theme on button press
     const onUpdateTheme = (theme) => {
-        typeof window !== "undefined" && window.gtag("event", "click", { "theme": "Changed" })
+        console.log("Theme updating from", theme)
+        if (window) {
+            window.gtag("event", "click", { "theme": theme })
+        }
         switch (theme) {
             case 'light':
                 setDarkTheme()

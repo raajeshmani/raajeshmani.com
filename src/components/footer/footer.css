@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 550px;
 }
 
 .footer .intro-social a {
@@ -36,6 +36,7 @@
 
 .footer .intro-social .svg:hover {
     transform: scale(1.2,1.2);
+    --icon-color: #E4236D;
 }
 
 .footer .intro-social a:hover {
